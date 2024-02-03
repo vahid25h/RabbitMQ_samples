@@ -28,7 +28,7 @@ consumer.Received += (sender, args) =>
     Console.WriteLine($"Meeegahe Received: {message}");
     channel.BasicAck(args.DeliveryTag, false);
 };
-
+--test
 string consumerTag = channel.BasicConsume(queueName,false,consumer);
 
 Console.ReadLine();
